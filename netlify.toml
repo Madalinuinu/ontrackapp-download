@@ -1,0 +1,10 @@
+[build]
+  publish = "."
+  # Nu e nevoie de build step pentru site static
+
+# Headers pentru APK - browserul va oferi descărcarea fișierului
+[[headers]]
+  for = "/downloads/*.apk"
+  [headers.values]
+    Content-Type = "application/vnd.android.package-archive"
+    Content-Disposition = "attachment"
